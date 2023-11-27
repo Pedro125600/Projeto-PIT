@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 206, 255, 0.00) 0%, rgba(112, 255, 229, 0.97) 0.01%, rgba(141, 234, 255, 0.72) 65.62%, #A127FF 100%);
+}
+
+.container {
+    width: 70%;
+    height: 95vh;
+    display: flex;
+}
+
+.form-image {
+     width: 50%; /* 50% de 80% da div coitainer */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: transparent;
+     padding: 1rem;
+}
+
+.form-image img {
+    width: 31rem;
+}
+
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.form {
+   width: 45%;   /* dividindo a telinha */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-color: aliceblue;
+   padding: 3rem;
+   border-radius: 20px;
+}
+
+
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    width: 90px;
+    border: none;
+    background-color: #08c4eed5;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login-button button:hover {
+    background-color:#0990aec9;;
+    transition: 0.5s;
+}
+
+.login-button button a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5.5rem;
+    height: 0.3rem;
+    background-color: #0990ae;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;    
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+#CPF {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    height: 90;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box textarea {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    resize: vertical; /* Permite redimensionar verticalmente o textarea */
+}
+
+.input-box textarea:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box textarea:focus-visible {
+    outline: 1px solid #0990ae;
+}
+
+.input-box label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box textarea::placeholder {
+    color: #000000be;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #0990ae;
+}
+
+.input-box  label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0 02rem;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border:none;
+    background-color: #08c4eed5;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.continue-button button:hover {
+    background-color: #0990aec9;
+    transition: 0.5s;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    color: #000000c0;
+    font-size: 0.93rem;
+}
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px
+}
+
+.checkbox-input input[type="radio"] {
+    margin-right: 0.35rem;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.checkbox-input input[type="radio"]:checked + label {
+    font-weight: bold;
+}
+
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section p {
+    font-size: 0.9rem;
+    color: #000000c0;
+}
+
+.login-section a {
+    margin-left: 0.3rem;
+    color: #0990ae;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-section a:hover {
+    color: #066f82;
+}
+
+
+ /* responsividade código */
+ @media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+
+    .form-header h1 {
+        font-size: 1.6rem;  
+    }
+
+    .continue-button button {
+        margin-top: 1.5rem;
+    }
+
+    .form-header {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+
+    .form-header {
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .container {
+        width: 90%;
+        height: 100%;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: none;
+    }
+
+    .continue-button button {
+        margin-top: 1.0rem;
+        padding: none;
+        margin : none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+}

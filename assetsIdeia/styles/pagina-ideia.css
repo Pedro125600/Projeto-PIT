@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --header:#681999;
+    --white:#fff;
+    --dark:#1e1c2a;
+    --azul: #2FCDF1;
+    --claro: #1689a0;
+}
+body{
+    background-image: linear-gradient(#2FCDF1,#C478FF);
+    height: 100%;
+}
+/* header inicio  */
+.modal {
+    display: none; /* inicialmente oculto */
+    position: fixed; /* Fixo na janela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 1000; /* Garantindo que fique por cima de outros elementos */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 10px;
+}
+
+.logout-button:hover {
+    transform: scale(1.05);  /* Aumenta um pouco o tamanho do botão */
+}
+
+.profile-button {
+    background-color: #007BFF;  /* Azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 10px;
+    display: block;  /* Para que o botão ocupe toda a largura */
+}
+
+.profile-button:hover {
+    transform: scale(1.05);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    width: 100%;
+    transition: all 0.5s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2    );
+    background: linear-gradient(to right, rgba(164, 4, 208, 0.583), rgba(0, 204, 255, 0.195), rgba(164, 4, 208, 0.583));
+    
+}
+.navigation .logo img{
+    width: 150px;
+    height: 5%;
+    
+}
+.logo span{
+    color: var(--dark);
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: var(--azul);
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--azul);
+}
+
+/* header fim */
+
+
+
+/* seção principal */
+
+.central-section {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 10px; /* Ajuste a posição vertical conforme necessário */
+    right: 10px; /* Ajuste a posição horizontal conforme necessário */
+    width: 40px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 40px;
+    border-radius: 50%; /* Para criar uma imagem de perfil circular */
+    border: 2px solid #fff; /* Adiciona uma borda branca à imagem */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1); /* Aumenta em 10% quando passa o mouse */
+    transition: transform 0.3s; /* Adiciona uma transição suave */
+}
+
+.idea-card {
+    position: relative;
+    display: flex;
+    background: #f5f5f5; /* Cor de fundo do cartão */
+    border: 1px solid #ddd; /* Borda do cartão */
+    border-radius: 20px;
+    padding: 50px;
+    width: 50%; /* Ajuste a largura do cartão conforme necessário */
+    margin-top: 10%;
+}
+
+.left-content {
+    width: 30%;
+}
+
+.right-content {
+    width: 70%;
+    padding-left: 20px; /* Espaçamento entre a imagem e o conteúdo à direita */
+}
+
+h1 {
+    font-size: 24px;
+    color: #007BFF; /* Cor azul para o nome da ideia */
+}
+
+p {
+    font-size: 16px;
+    color: #333; /* Cor de texto padrão */
+}
+
+.tags span {
+    background-color: #2FCDF1;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+/* Restante do CSS permanece o mesmo conforme comentários anteriores. */
+
+.action-buttons button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Adicionando uma transição suave de cor */
+}
+
+.action-buttons button i {
+    margin-right: 5px;
+}
+
+.action-buttons button:hover {
+    background-color: #4CAF50; /* Cor esverdeada no hover */
+}
+
+.action-buttons .follow-button.following {
+    background-color: #4CAF50; /* Cor esverdeada */
+}
+
+.action-buttons .follow-button.following i {
+    margin-right: 5px;
+}
+
+/* Estilos para os modais personalizados */
+.custom-modal {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.custom-modal h2 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.custom-modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.custom-modal button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s;
+}
+
+/* Restante do CSS permanece o mesmo. */
+
+
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comment {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.view-more-comments {
+     margin-left: auto; /* Move o botão para a margem direita */
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.view-more-comments:hover {
+    background-color: #ddd; /* Tons de cinza quando hover */
+    color: #333; /* Texto em tons de cinza mais escuros quando hover */
+    transition: 0.3s;
+}
+
+.idea {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.idea img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.idea h3 {
+    font-size: 18px;
+    color: #007BFF; /* Cor azul para o nome da outra ideia */
+}
+
+.idea p {
+    font-size: 16px;
+    color: #333; /* Cor de texto padrão */
+}
+
+/* fim da seção principal */
+
+
+
+
+/* footer inicio  */ 
+
+footer {
+    background-color: transparent;
+    padding: 80px ;    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--azul);
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: black;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--azul);
+}
+
+.footer-section a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* footer fim */
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+}
+
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas com larguras iguais */
+    }
+    .ideia-item {
+        padding: 20px; /* espaço interno um pouco reduzido para telas menores */
+        height: 150px; /* Altura um pouco reduzida para telas menores */
+    }
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 785px) {
+    .destaques {
+        flex-direction: column;
+    }
+
+    .destaque-item {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+
+    .navigation ul {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        position: relative; /* Adicione essa propriedade para tornar a posição relativa */
+        z-index: 1; /* Adicione um z-index maior para sobrepor o conteúdo */
+    }
+    
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+}
+
+/* Adaptar para telas menores */
+@media (max-width: 768px) {
+    .filter-button {
+        margin: 5px; /* Adicionar uma pequena margem ao redor de cada botão */
+        font-size: 14px; /* Diminuir um pouco o tamanho da fonte */
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-button {
+        padding: 6px 10px; /* Reduzir um pouco o padding dos botões */
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Uma única coluna em telas menores */
+    }
+
+    .idea-card {
+        width: 100%; /* Largura total do cartão */
+    }
+
+    .profile-photo {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .right-content {
+        padding-left: 10px; /* Espaçamento à esquerda reduzido */
+    }
+
+    .action-buttons button {
+        font-size: 14px; /* Tamanho de fonte reduzido para botões */
+    }
+
+    .comments .comment {
+        padding: 8px; /* Espaçamento interno reduzido para comentários */
+    }
+
+    .view-more-comments {
+        font-size: 14px;
+    }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 25px; /* Reduzir ainda mais o tamanho da foto de perfil */
+        height: 25px;
+    }
+
+    .right-content {
+        padding-left: 5px; /* Espaçamento à esquerda ainda mais reduzido */
+    }
+
+    .action-buttons button {
+        font-size: 12px; /* Tamanho de fonte ainda mais reduzido para botões */
+    }
+
+    .comments .comment {
+        padding: 6px; /* Espaçamento interno ainda mais reduzido para comentários */
+    }
+
+    .view-more-comments {
+        font-size: 12px;
+    }
+}
+

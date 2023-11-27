@@ -1,0 +1,167 @@
+.modal {
+    display: none; /* inicialmente oculto */
+    position: fixed; /* Fixo na janela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 1000; /* Garantindo que fique por cima de outros elementos */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 10px;
+}
+
+.logout-button:hover {
+    transform: scale(1.05);  /* Aumenta um pouco o tamanho do botão */
+}
+
+.profile-button {
+    background-color: #007BFF;  /* Azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 10px;
+    display: block;  /* Para que o botão ocupe toda a largura */
+}
+
+.profile-button:hover {
+    transform: scale(1.05);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    width: 100%;
+    transition: all 0.5s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2    );
+    background: linear-gradient(to right, rgba(164, 4, 208, 0.583), rgba(0, 204, 255, 0.195), rgba(164, 4, 208, 0.583));
+    
+}
+.navigation .logo img{
+    width: 150px;
+    height: 5%;
+    
+}
+.logo span{
+    color: var(--dark);
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: var(--azul);
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--azul);
+}
+
+footer {
+    backdrop-filter: blur(10px); /* Isso aplica o efeito de desfoque ao conteúdo atrás do rodapé */
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Uma borda sutil para melhorar o efeito */
+    padding: 40px 0;
+    color: black;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--azul);
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: black;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--azul);
+}
+
+.footer-section a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,402 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --header:#681999;
+    --white:#fff;
+    --dark:#1e1c2a;
+    --azul: #2FCDF1;
+    --claro: #1689a0;
+}
+body{
+    color: var(--dark);
+    background: linear-gradient(180deg, rgba(0, 206, 255, 0.00) 0%, rgba(112, 255, 229, 0.97) 0.01%, rgba(141, 234, 255, 0.72) 78.65%, #A127FF 100%);
+}
+
+.modal {
+    display: none; /* inicialmente oculto */
+    position: fixed; /* Fixo na janela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 1000; /* Garantindo que fique por cima de outros elementos */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 10px;
+}
+
+.logout-button:hover {
+    transform: scale(1.05);  /* Aumenta um pouco o tamanho do botão */
+}
+
+.profile-button {
+    background-color: #007BFF;  /* Azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: 10px;
+    display: block;  /* Para que o botão ocupe toda a largura */
+}
+
+.profile-button:hover {
+    transform: scale(1.05);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    width: 100%;
+    transition: all 0.5s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2    );
+    background: linear-gradient(to right, rgba(164, 4, 208, 0.583), rgba(0, 204, 255, 0.195), rgba(164, 4, 208, 0.583));
+    
+}
+.navigation .logo img{
+    width: 150px;
+    height: 5%;
+    
+}
+.logo span{
+    color: var(--dark);
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: var(--azul);
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--azul);
+}
+
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #f4f4f4; /* Uma cor de fundo suave */
+    margin-bottom: 20px; /* Espaço antes do título "Destaques" */
+    flex-wrap: wrap;
+    justify-content: center; /* Isso centralizará os botões se eles quebrarem em duas linhas ou mais */
+    gap: 10px; /* Isso dará um pequeno espaço entre os botões se eles quebrarem em novas linhas */
+}
+
+.filter-button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    color: var(--dark); /* Ou outra cor que você preferir */
+}
+
+.filter-button:hover {
+    background-color: #e0e0e0; /* Cor quando o botão é passado o mouse em cima */
+}
+
+
+/* destaques  */
+
+.destaques {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 100px 0;
+    min-height: 500px;
+    
+}
+
+ h2 {
+    font-size: 2rem;        
+    margin-bottom: 20px;  
+    color: var(--dark);     
+    text-align: center;     
+    margin-top: 3%;
+}
+
+
+.destaque-item {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    background: var(--white);
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid var(--dark); /* borda para visualizar as divs */
+}
+
+.destaque-item h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.destaque-item p {
+    color: var(--dark);
+}
+
+
+.recentes {
+    padding: 60px 0; /* espaço ao redor para separar das outras seções */
+    text-align: center; /* centraliza o título da seção */
+    bottom: -25px;
+}
+
+.recentes h2 {
+    margin-bottom: 20px; /* espaço abaixo do título */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas com larguras iguais */
+    gap: 40px; /* espaço entre as divs */
+    justify-content: center; /* centraliza os itens no container, se houver espaço extra */
+}
+
+.ideia-item {
+    padding: 30px; /* maior espaço interno para cada div */
+    border: 1px solid var(--dark); /* borda para visualizar as divs */
+    background-color: white; /* plano de fundo das divs */
+    text-align: center; /* centraliza o texto dentro das divs */
+    border-radius: 10px; /* bordas arredondadas para estética */
+    font-size: 1.2rem; /* Tamanho da fonte maior */
+    height: 230px; /* Altura definida para cada item para mantê-los uniformes */
+    position: relative;
+}
+
+.ideia-title {
+    position: absolute; /* Isso coloca o título fora do fluxo normal e em relação ao seu contêiner parent */
+    bottom: -30px; /* Ajuste esse valor conforme necessário para posicionar o título corretamente abaixo do contêiner */
+    left: 50%; /* Centraliza o título horizontalmente em relação ao contêiner */
+    transform: translateX(-50%); /* Ajuda a centralizar o título */
+    font-size: 1.2rem; /* Ajuste conforme necessário */
+    color: var(--dark); /* Escolha sua cor */
+}
+
+
+footer {
+    backdrop-filter: blur(10px); /* Isso aplica o efeito de desfoque ao conteúdo atrás do rodapé */
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Uma borda sutil para melhorar o efeito */
+    padding: 40px 0;
+    color: black;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--azul);
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li a {
+    color: black;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--azul);
+}
+
+.footer-section a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+}
+
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas com larguras iguais */
+    }
+    .ideia-item {
+        padding: 20px; /* espaço interno um pouco reduzido para telas menores */
+        height: 150px; /* Altura um pouco reduzida para telas menores */
+    }
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 785px) {
+    .destaques {
+        flex-direction: column;
+    }
+
+    .destaque-item {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+}
+
+/* Adaptar para telas menores */
+@media (max-width: 768px) {
+    .filter-button {
+        margin: 5px; /* Adicionar uma pequena margem ao redor de cada botão */
+        font-size: 14px; /* Diminuir um pouco o tamanho da fonte */
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-button {
+        padding: 6px 10px; /* Reduzir um pouco o padding dos botões */
+    }
+}

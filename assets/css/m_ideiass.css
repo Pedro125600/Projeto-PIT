@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* FIM DO CABEÇALHO */
+
+
+.form-header {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  
+}
+
+.form-header h1::after {
+  content: '';
+  display: block;
+  width: 3.5rem;
+  height: 0.3rem;
+  background-color: #0990ae;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;    
+}
+
+.form-header h1 {
+  font-size: 40px;
+}
+
+
+.title{
+  margin-bottom: 1rem;
+}
+
+.usuario {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.0rem;
+}
+
+.detalhes-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: flex-start; /* Alinha ao lado esquerdo */
+  width: 35%;
+}
+
+.detalhes-user img {
+  margin-left: 10px;
+}
+
+/* Estilização da tabela */
+/* Estilização da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Define a largura das colunas como fixa */
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Estilo das linhas ímpares */
+tr.odd {
+  background-color: #f7f7f7;
+}
+
+/* Estilo das linhas pares */
+tr.even {
+  background-color: #e0e0e0;
+}
+
+/* Estilização dos cabeçalhos da tabela */
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilo das células com texto em negrito */
+td strong {
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  table {
+      width: 100%;
+  }
+  th, td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+  }
+}
+
+
+
+
+
+
+
+  
+/* incio da seção principal de usuario */
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+
+
+
+
+
+
+
+ 
+
+ .title{
+    margin-bottom: 1rem;
+ }
+
+ .usuario {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.0rem;
+ }
+
+ .detalhes-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: flex-start; /* Alinha ao lado esquerdo */
+    width: 35%;
+ }
+
+ .detalhes-user img {
+    margin-left: 10px;
+ }
+
+
+ .foto-user {
+    width: 233px;
+    height: 229px;
+    border-radius: 233px;
+    background: #B1F0FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .foto-user img {
+    margin-bottom: 2.0rem;
+ }
+
+ .nome-user {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+ }
+
+ .nome-user img {
+    width: 30px; 
+ }
+
+ .imagem-idea {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+ }
+
+ .imagem-idea img {
+    width: 80%;
+    height: 100%
+ }
+
+ .dados label {
+    font-size:larger;
+ }
+
+ .dados ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seus-projetos {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    margin-bottom:1.5rem;
+}
+
+.container-ideias {
+    width: 95%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    background: #B1F0FF;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.box-ideia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: 247px;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+
+
+/* CSS para ocultar o container de ideias quando a largura da tela for menor que 1000px */
+@media (max-width: 500px) {
+  .ideias-container {
+      visibility: hidden;
+      display: none;
+  }
+
+.box-ideia{
+  visibility: hidden;
+      display: none;
+}
+
+
+}
+
+
+
+/* abaixo tem a responsividade do cabeçalho */
+
+  /* Responsividade para celulares */
+@media screen and (max-width: 480px) {
+    header {
+      padding: 0.5rem;
+      background-size: 90% auto;
+    }
+  
+    .header-container {
+      width: 95%;
+    }
+  
+    nav ul li {
+      margin-left: 1rem;
+    }
+  
+    .container {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .form-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+  
+    .form {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Estilos para dispositivos com largura menor que 1000px */
+  
+  @media (max-width: 1000px) {
+    .desktop-nav {
+      display: none;
+    }
+    
+    .mobile-nav-icon {
+      display: block;
+      cursor: pointer;
+    }
+    
+    .mobile-nav {
+      display: none;
+    }
+    
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .form-image {
+      width: 80%;
+    }
+    
+    .form {
+      width: 80%;
+      margin-top: 20px;
+    }
+  }
+  
+  /* Estilos para dispositivos com largura maior ou igual a 1000px */
+  
+  @media (min-width: 1000px) {
+    .mobile-nav-icon {
+      display: none;
+    }
+    
+    .mobile-nav {
+      display: none;  
+    }
+  }
+
+  
+
+  /* Media query para dispositivos com largura menor ou igual a 480px */
+@media screen and (max-width: 480px) {
+    header {
+      padding: 0.5rem;
+      background-size: 90% auto;
+    }
+  
+    .header-container {
+      width: 95%;
+    }
+  
+    nav ul li {
+      margin-left: 1rem;
+    }
+  
+    .container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .form-header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  
+    .usuario {
+      width: 100%;
+      height: auto;
+      padding: 1.5rem;
+      text-align: center;
+    }
+  
+    .foto-user {
+      margin-bottom: 1rem;
+    }
+  
+    .detalhes-user {
+      width: 100%;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+  
+    .dados {
+      text-align: center;
+    }
+  
+    .container-ideias {
+      width: 100%;
+    }
+  
+    .box-ideia {
+      width: 90%;
+      margin: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .box-ideia h3 {
+      margin-top: 0.5rem;
+    }
+  }
+  
+  /* Media query para dispositivos com largura menor ou igual a 768px */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  
+    .form-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .usuario {
+      width: 30%;
+      height: auto;
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .foto-user {
+      margin-bottom: 2rem;
+    }
+  
+    .detalhes-user {
+      width: 60%;
+      margin-top: 0;
+      text-align: left;
+    }
+  
+    .dados {
+      text-align: left;
+      margin-top: 1rem;
+    }
+  
+    .imagem-idea {
+      margin-top: 0;
+      margin-left: 2rem;
+    }
+  
+    .container-ideias {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  
+    .box-ideia {
+      width: 45%;
+      margin: 1rem;
+      height: 200px;
+    }
+  
+    .box-ideia h3 {
+      margin-top: 1rem;
+    }
+  }
+  
+  /* Media query para dispositivos com largura menor ou igual a 1024px */
+  @media screen and (max-width: 1024px) {
+    .container {
+      width: 80%;
+    }
+  
+    .form-header {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .usuario {
+      width: 40%;
+      height: auto;
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .detalhes-user {
+      width: 60%;
+      text-align: left;
+      margin-top: 1rem;
+    }
+  
+    .dados {
+      margin-top: 1rem;
+    }
+  
+    .container-ideias {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  
+    .box-ideia {
+      width: 45%;
+      margin: 1rem;
+      height: 220px;
+    }
+  }
+  
+
+
+  

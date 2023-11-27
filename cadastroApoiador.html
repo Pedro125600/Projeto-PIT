@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    <script src="assets/js/cadastro.js"></script>
+    <title>Cadastre-se</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="assets/img/cadastroimg.svg">
+        </div>
+        <div class="form">
+            <form action="Registro.php" method="post">
+                <!--back-end necessário -->
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome</label>
+                        <input id="firstname" type="text" name="Nome" placeholder="Digite seu primeiro nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="Email" placeholder="Digite seu email" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="CPF">CPF</label>
+                        <input id="CPF" name="CPF" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="Senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="Tel" placeholder="(xx) x xxxx-xxxx" maxlength="15" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Confirme sua senha</label>
+                        <input id="password" type="password" name="Senha2" placeholder="Digite sua senha novamente"
+                            required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Renda familiar</label>
+                        <input id="Renda" type="number" name="Renda" placeholder="Digite aproximadamente sua renda familiar"
+                            required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="descrição">Descrição</label>
+                        <textarea id="descricao" name="Info" placeholder="Conte um pouco sobre você"
+                            required></textarea> <!--mudança de propriedade-->
+                    </div>
+
+                 
+                    <div class="login-section">
+                        <p>Já tem uma conta?<a href="login.html"><br>Faça Login</a></p>
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <input type="hidden" name="Tipo" id="Tipo" value="Apoiador">
+
+                    <button type="submit" name="enviar">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

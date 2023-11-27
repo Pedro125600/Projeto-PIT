@@ -1,0 +1,128 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cadastre sua ideia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/teste.css'>
+     <!-- biblioteca de ícones -->
+     <link rel="stylesheet" href="assets/styles/styles.css">
+     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src='ideia.js'></script>
+</head>
+<form  action="deslogar.php" method="post" >
+    <body>
+        <header>
+            <nav class="navigation">
+                <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="Todas_as_ideias.php">Ideias</a></li>
+                    <li class="nav-item"><a href="#">Apoiador</a></li>
+                    <li class="nav-item"><a href="#">Menu</a></li>
+                    <i class='bx bx-user'></i>
+                    <i class='bx bx-search'></i>
+                </ul>
+                <div class="menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                
+                </div>
+            </nav>
+        </header>
+    
+        <div class="modal" id="userModal">
+            <div class="modal-content">
+                <i class='bx bx-user' style="color: red;"></i>
+                <p>Deslogar do sistema?</p>
+                <input type="submit" id="logout" name="logout" class="logout-button" value="deslogar">
+                <button class="profile-button"> <a href="pagina_inicial.php"> Meu Perfil</button> </a>
+            </div>
+        </div>
+    </form>
+
+   
+
+    <main>
+        <div class="container">
+            <div class="form-image">
+                <img src="assets/img/homem.svg"> 
+            </div>
+            <div class="form">
+                <form action="ideia.php" method="post" enctype="multipart/form-data">
+
+                    <!--back-end necessário -->
+                    <div class="form-header">
+                        <div class="title">
+                            <h1>Cadastre-se sua ideia</h1>
+                        </div>
+                        <div class="login-button">
+                            <button><a href="pagina_inicial.php">Voltar</a></button> <!--back-end necessário -->
+                        </div>
+                    </div>
+    
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="nameideia">Nome da ideia</label>
+                            <input id="nameideia" type="text" name="nome_ideia" placeholder="Digite seu primeiro nome" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="typeapoiador">Descreva o tipo de Apoiador</label>
+                            <input id="typeapoiador" type="text" name="tipo_apoiador" placeholder="Digite seu sobrenome" required>
+                        </div>
+
+
+                        <div class="input-box">
+                            <label for="descrição">Descrição</label>
+                            <textarea id="descricao" name="descricao" placeholder="Digite uma breve descrição sobre a Ideia"
+                                required></textarea> <!--mudança de propriedade-->
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="palavras">Digite palavras chaves para a ideia</label>
+                            <textarea id="palavras-chave" name="Tag" placeholder="Digite no minimo 2 palavras chaves"
+                                required></textarea> <!--mudança de propriedade-->
+                        </div>
+    
+    
+                        <div class="input-box">
+                            <label for="password">Valor base do Projeto</label>
+                            <input id="password" type="text" name="Valor_nin" placeholder="R$00,00" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="number">Informe o tipo de ideia</label>
+                            <select id="typeideia"  name="tipo_ideia" required>
+                                <option value="tecnologia">Tecnologia</option>
+                                <option value="arte">Arte</option>
+                                <option value="educação">Educação</option>
+                                <option value="saúde">Saúde</option>
+                                <option value="Programaçã">Programaçã</option>
+                                <option value="Jogos">Jogos</option>
+                                <!-- Adicione outras opções conforme necessário -->
+                            </select>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="password">Foto do conceito do projeto</label>
+                            <input type="file" name="foto">
+                               
+                        </div>
+    
+                    </div>
+                    <div class="continue-button">
+                        <button   type="submit"  name="enviar">Cadastrar Ideia</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/assets/js/main.js"></script>
+</body>
+</html>

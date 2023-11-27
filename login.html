@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Faça Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/login.css'>
+    <!-- biblioteca de ícones -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src='assets/js/login.js'></script>
+</head>
+
+<form  method="post">
+    <body>
+        <header>
+            <nav class="navigation">
+      
+                <a href="" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="Todas_as_ideias.php">Ideias</a></li>
+                    <li class="nav-item"><a href="minhas_doacoes.php">Doações</a></li>
+                    <li class="nav-item"><a href="minhas_ideias.php">Arrecadações</a></li>
+                    <i class='bx bx-user'></i>
+                    <i class='bx bx-search'></i>
+                </ul>
+                <div class="menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+    
+        <div class="modal" id="userModal">
+            <div class="modal-content">
+                <i class='bx bx-user' style="color: red;"></i>
+                <p>Deslogar do sistema?</p>
+                <input type="submit" id="logout" name="logout" class="logout-button" value="deslogar">
+                <button class="profile-button"> <a href="pagina_inicial.php"> Meu Perfil</button> </a>
+            </div>
+        </div>
+    </form>
+
+    <div class="container">
+        <div class="form-image">
+            <img src="assets/img/cadastroimg.svg">
+        </div>
+        <div class="form">
+            <form action="Back-End_Login.php" method="post">
+                <!-- back-end necessário -->
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Login</h1>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="Nome" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="Senha" placeholder="Digite sua senha" required>
+                        <span class="forgot-password">Esqueceu a senha?</span>
+                    </div>
+                    <div class="continue-button">
+                        <button type="submit" name="enviar" >Entrar</button>
+                    </div>
+                    
+                    <div class="login-section">
+                        <p>Não tem uma conta?<a href="Tipo.html"><br>Cadastre-se</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
